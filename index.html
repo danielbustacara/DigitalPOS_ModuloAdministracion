@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Modulo Administracion DigitalPOS</title>
+    <link rel="stylesheet" href="css/styleSheet.css">
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="images/logo.png" alt="not found"/>
+      <h1>DIGITAL POS</h1>
+    </header>
+    <div class="menu">
+      <div class="menu-lateral">
+        <ul>
+          <li><a href="#">Consultar Informacion PDV</a></li>
+          <li><a href="#">Cambiar Pin</a></li>
+        </ul>
+      </div>
+    <div class="menu-central">
+      <h1>Consultar Punto de Venta: </h1><br/>
+      <form class="fomulario" action="punto_de_venta.html" method="post">
+        Ingrese el msisdn del PDV: <input type="text" name="msidn" placeholder="Ingresar msisdn" type="number"><br/>
+        <input type="submit" name="btnConsultar" value="Consultar" class="boton">
+      </form>
+    </div>
+    </div>
+    <footer>
+      <h3>TIGO 2018</h3>
+    </footer>
+  </body>
+</html>
