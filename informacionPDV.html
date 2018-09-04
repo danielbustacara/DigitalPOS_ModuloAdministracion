@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/styleSheet.css">
+    <script type="text/javascript" src="js/funciones.js">
+    </script>
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -27,35 +30,48 @@
 
     <div class="bg-primary text-white py-3">
       <div class="container">
-        <h1>DigitalPOS</h1>
-        <p class="lead">Modulo de administracion de los puntos de venta</p>
+        <h3>Consultar Informacion usuario</h3>
+        <p class="lead">Realice la consulta de informacion de un Punto de venta</p>
       </div>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <div class="card bg-info">
-            <div class="card-body">
-                <a href="punto_de_venta.html"><img src="/images/cons_usuario.png" alt="NotFound" class="rounded mx-auto d-block"></a>
-                <div class="card-block">
-                  <h3 class="card-title">Consultar Informacion Usuario</h3>
-                  <p>Consulte toda la Informacion correspondiente a los puntos de venta</p><br/>
-                </div>
-            </div>
+      <div class="justify-content-center my-5">
+        <table class="table  text-white">
+          <thead class="bg-dark">
+            <tr>
+              <th scope="col">Owner</th>
+              <th scope="col">MSISDN</th>
+              <th scope="col">Nombre PDV</th>
+              <th scope="col">Direccion</th>
+              <th scope="col">Status</th>
+              <th scope="col">Email</th>
+              <th scope="col">Categoria</th>
+            </tr>
+          </thead>
+          <tbody class="bg-secondary">
+            <tr>
+              <th scope="row">USER TEST</th>
+              <td>88813306</td>
+              <td>PULPERIA TEST</td>
+              <td>BARRIO SAN JUAN TST</td>
+              <td>VENDE</td>
+              <td>pulperiatest@gmail.com</td>
+              <td>PDV</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row my-5">
+          <div class="col-6">
+            <a href="cambiar_pin.html" class="btn btn-success">Cambiar PIN</a>
           </div>
-        </div>
-        <div class="col-6">
-          <div class="card bg-info">
-            <div class="card-body">
-              <img src="/images/cronografo.png" alt="NotFound" class="rounded mx-auto d-block">
-              <h3 class="card-title">PDV proximos a ser bloqueados</h3>
-              <p>Consulte toda la Informacion correspondiente a los puntos de venta que estan a punto de ser bloqueados por inactividad</p>
-            </div>
+          <div class="col-6">
+            <button type="button" onclick="enviarPin()" class="btn btn-danger">Resetear PIN</button>
+            <p class="text-muted">*El nuevo PIN sera enviado via sms al numero registrado</p>
           </div>
         </div>
       </div>
+      <br/><br/><br/>
     </div>
-    <p></p>
     <div class="text-center bg-primary text-white py-2">Tigo Honduras Copyright © . Honduras Celtel S.A. Todos los derechos reservados.</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

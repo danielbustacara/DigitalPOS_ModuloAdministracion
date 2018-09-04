@@ -1,57 +1,63 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Modulo Administracion DigitalPOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/styleSheet.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>DigitalPOS</title>
   </head>
   <body>
-    <header>
-      <img class="logo" src="images/logo.png" alt="not found"/>
-      <h1>DIGITAL POS</h1>
-    </header>
-    <div class="menu">
-      <div class="menu-lateral">
-        <ul>
-          <li><a href="#">Informacion PDV</a></li>
-          <li><a href="#">Cambiar Pin</a></li>
-          <li><a href="index.html">Menu Principal</a></li>
-        </ul>
+    <div class="row bg-dark">
+      <div class="col-3">
+        <img src="/images/logo.png" alt="NotFound" class="justify-content-start">
       </div>
-      <div class="menu-central">
-        <h2>Informacion PDV</h2>
-        <p>Acontinuacion encontrara la informacion correspondiente al PDV cuyo msisdn de venta es 88813306</p>
-        <table>
-          <thead>
-            <td>Id Usuario</td>
-            <td>Nombre</td>
-            <td>Categoria</td>
-            <td>Msisdn</td>
-            <td>Correo</td>
-            <td>Estado</td>
-            <td>Departamento</td>
-            <td>Direccion</td>
-            <td>Tipo</td>
-          </thead>
-          <tr>
-            <th>1023</th>
-            <th>Tigo Shop</th>
-            <th>PDV</th>
-            <th>88813306</th>
-            <th>soporte@tigo.com.hn</th>
-            <th>Activo</th>
-            <th>INTIBUCA</th>
-            <th>BARRIO SAN JUAN TST</th>
-            <th>PDV</th>
-          </tr>
-        </table>
-        <br/><br/>
-        <p>
-          <h2>Realizar Reset PIN</h2>
-          <a href="reset_pin.html" class="boton">Reset Pin</a>
-        </p>
+      <div class="col-9">
+        <nav class="nav justify-content-end">
+          <a class="nav-link active text-white" href="#menu" data-toggle="tab">Menu Principal</a>
+          <a class="nav-link text-white" href="#configuracion" data-toggle="tab">Configuracion</a>
+          <a class="nav-link text-white" href="#soporte" data-toggle="tab">Soporte</a>
+          <a class="nav-link text-white" href="#usuario" data-toggle="tab">Usuario</a>
+        </nav>
       </div>
     </div>
-    <footer><h3>TIGO 2018</h3></footer>
+
+    <div class="bg-primary text-white py-3">
+      <div class="container">
+        <h3>Consultar Informacion usuario</h3>
+        <p class="lead">Realice la consulta de informacion de un Punto de venta</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="justify-content-center my-5">
+        <form class="fomulario-busqueda" action="informacionPDV.html" method="get">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="valorBusqueda" class="text-danger">*Ingrese el valor de acuerdo al metodo de busqueda seleccionado</label>
+              <input type="text" class="form-control" id="valorBusqueda" required="true">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="metodoBusqueda">Metodo de busqueda</label>
+              <select id="metodoBusqueda" class="form-control">
+                <option selected>...</option>
+                <option>Id Punto de venta</option>
+                <option>Msisdn Punto de venta</option>
+                <option>Identificacion dueño PDV</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Consultar</button>
+        </form>
+      </div>
+    </div>
+    <div class="text-center bg-primary text-white py-2">Tigo Honduras Copyright © . Honduras Celtel S.A. Todos los derechos reservados.</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>

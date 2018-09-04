@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/styleSheet.css">
+    <script type="text/javascript" src="js/funciones.js">
+    </script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -27,35 +29,32 @@
 
     <div class="bg-primary text-white py-3">
       <div class="container">
-        <h1>DigitalPOS</h1>
-        <p class="lead">Modulo de administracion de los puntos de venta</p>
+        <h3>Consultar Informacion usuario</h3>
+        <p class="lead">Realice la consulta de informacion de un Punto de venta</p>
       </div>
     </div>
     <div class="container">
-      <div class="row">
-        <div class="col-6">
-          <div class="card bg-info">
-            <div class="card-body">
-                <a href="punto_de_venta.html"><img src="/images/cons_usuario.png" alt="NotFound" class="rounded mx-auto d-block"></a>
-                <div class="card-block">
-                  <h3 class="card-title">Consultar Informacion Usuario</h3>
-                  <p>Consulte toda la Informacion correspondiente a los puntos de venta</p><br/>
-                </div>
+      <div class="row justify-content-center">
+        <div class="col-6 formulario my-2 py-3">
+          <h3>Cambio de PIN</h3>
+          <form class="" action="Home.html" method="get">
+            <div class="form-group">
+              <label for="formGroupExampleInput">Ingrese el PIN actual</label>
+              <input type="password" class="form-control" id="formGroupExampleInput" placeholder="Pin Actual">
             </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card bg-info">
-            <div class="card-body">
-              <img src="/images/cronografo.png" alt="NotFound" class="rounded mx-auto d-block">
-              <h3 class="card-title">PDV proximos a ser bloqueados</h3>
-              <p>Consulte toda la Informacion correspondiente a los puntos de venta que estan a punto de ser bloqueados por inactividad</p>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Ingrese el nuevo PIN</label>
+              <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Nuevo Pin">
             </div>
-          </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Confirme el nuevo PIN</label>
+              <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Nuevo Pin" autocomplete="false">
+            </div>
+            <button type="submit" onclick="cambioDePin()" class="btn btn-success">Cambiar PIN</button>
+          </form>
         </div>
       </div>
     </div>
-    <p></p>
     <div class="text-center bg-primary text-white py-2">Tigo Honduras Copyright © . Honduras Celtel S.A. Todos los derechos reservados.</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
